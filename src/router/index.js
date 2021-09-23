@@ -12,6 +12,9 @@ import NProgress from 'nprogress'
 import EventService from '@/services/EventService.js'
 import GStore from '@/store'
 import OrganizerService from '@/services/OrganizerService.js'
+import Organizers from '@/views/Organizers.vue'
+import OrganizerDetail from '@/views/OrganizerDetail.vue'
+import OrganizerForm from '@/views/OrganizerForm.vue'
 
 const routes = [
   {
@@ -82,6 +85,24 @@ const routes = [
         component: EventEdit
       }
     ]
+  },
+  {
+    path: '/organizers',
+    name: 'Organizers',
+    props: true,
+    component: Organizers
+  },
+  {
+    path: '/organizers/detail',
+    name: 'OrganizerDetail',
+    props: true,
+    component: OrganizerDetail
+  },
+  {
+    path: '/organizers/form',
+    name: 'OrganizerForm',
+    props: true,
+    component: OrganizerForm
   },
   {
     path: '/404/:resource',
